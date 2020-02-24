@@ -1,0 +1,39 @@
+{
+  "name": "externalservice",
+  "version": "1.0.0",
+  "description": "REST api for interaction with database",
+  "main": "./api/api",
+  "scripts": {
+    "tsc": "tsc",
+    "nodemon": "nodemon",
+    "build": "npm run tsc -- -b",
+    "app": "npm run tsc -- -b && npm run nodemon -- ./build/api.js",
+    "prod": "npm run tsc -- -b && node -- ./build/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flndre/TestShop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flndre/TestShop/issues"
+  },
+  "homepage": "https://github.com/flndre/TestShop#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.49",
+    "@types/koa-router": "^7.0.42",
+    "@types/mongoose": "^5.5.18",
+    "bcrypt": "^3.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

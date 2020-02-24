@@ -1,0 +1,10 @@
+{
+    "ExternalServiceHost": "http://127.0.0.1",
+    "ExternalServiceHostPort": 3000,
+    "secret_token": "AFA50Y434Jyj4HRM8923q1nf32rGzbpYH8l7Lj50Bkx8bhk716g",
+    "mongodb_host": "localhost",
+    "mongodb_port": "27017",
+    "mongodb_database": "TestShop",
+    "mongodb_user": "",
+    "mongodb_pass": ""
+}

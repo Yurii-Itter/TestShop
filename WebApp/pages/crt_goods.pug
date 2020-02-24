@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    div.text-center
+        form(class="form-signin" method="POST" action="/goods/create")
+            #error
+                if error
+                    p.text-info Fill fields please
+
+            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
+            h1(class=h1Classes) Add Goods
+
+            label( for="inputName" class="sr-only") Name
+            input(name="name" id="inputName" class="form-control" placeholder="Name" required autofocus)
+
+            label(for="inputCategory" class="sr-only") Category
+            input(name="category" id="inputCategory" class="form-control" placeholder="Category" required)
+
+            label(for="inputPrice" class="sr-only") Price
+            input(type="number" pattern="\d+(\.\d{2})?" step="0.01" name="price" id="inputPrice" class="form-control" placeholder="Price" required)
+
+            label(for="inputAmount" class="sr-only") Amount
+            input(type="number" pattern="\d+" name="amount" id="inputAmount" class="form-control" placeholder="Amount" required)
+
+            - var buttonClass=['btn', 'btn-lg', 'btn-success', 'btn-block'];
+            button(class=buttonClass type="submit") Add

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    div.container
+        div.row
+            div.container.p-3.d-flex.justify-content-end
+                button(onclick="window.location.href='/goods'").btn.btn-danger.btn-sm
+                    i.fa.fa-close
+            div.col-12
+                table.table.table-bordered.text-dark
+                    thead
+                        tr.text-center
+                            th Category
+                            th Amount of goods
+                            th Average Cost
+                            th The total cost of all goods
+                            th Minimal cost
+                            th Maximal cost
+                    tbody
+                        for stat in stats
+                            tr
+                                td= stat._id
+                                td= stat.amount
+                                td= stat.avgPrice
+                                td= stat.sum
+                                td= stat.minPrice
+                                td= stat.maxPrice
+                    

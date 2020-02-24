@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div.container
+        div.row
+            div.container.p-3.d-flex.justify-content-between
+                button(onclick="window.location.href='/stat'").btn.btn-info.btn-sm
+                    i.fa.fa-info-circle
+                button(onclick="window.location.href='/goods/create'").btn.btn-success.btn-sm
+                    i.fa.fa-plus
+            div.col-12
+                table.table.table-bordered.text-dark
+                    thead
+                        tr.text-center
+                            th Name
+                            th Category
+                            th Price
+                            th Amount
+                            th Actions
+                    tbody
+                        for item in response.reverse()
+                            tr
+                                td= item.name
+                                td= item.category
+                                td= item.price
+                                td= item.amount
+                                td.d-flex.flex-row.justify-content-around
+                                    button(onclick=`window.location.href='/goods/update?id=${item._id}&n=${item.name}&ctg=${item.category}&prc=${item.price}&amt=${item.amount}'`).btn.btn-primary
+                                        i.fa.fa-edit
+                                    button(onclick="window.location.href='/goods/delete?id=" + item._id + "'").btn.btn-danger
+                                        i.fa.fa-trash

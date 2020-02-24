@@ -1,0 +1,46 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "front end part of application",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "nodemon": "nodemon",
+    "build": "npm run tsc -- -b",
+    "app": "npm run tsc -- -b && npm run nodemon -- ./build/app.js",
+    "prod": "npm run tsc -- -b && node -- ./build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flndre/TestShop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flndre/TestShop/issues"
+  },
+  "homepage": "https://github.com/flndre/TestShop#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.50",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa-static": "^4.0.1",
+    "@types/koa-views": "^2.0.3",
+    "@types/pug": "^2.0.4",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "local-storage": "^2.0.0",
+    "pug": "^2.0.4",
+    "pug-parser": "^5.0.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "typescript": "^3.6.3",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

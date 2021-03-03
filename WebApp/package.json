@@ -33,7 +33,7 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.1",
     "local-storage": "^2.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-parser": "^5.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
